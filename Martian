@@ -1,0 +1,45 @@
+import java.util.Random;
+
+public class Martian {
+    
+    //fields
+	private String name;
+	private static int count;
+	private static Random rand = new Random();
+	
+	//constructor
+	public Martian() {
+	    
+	    getRandomName();
+	    count++;
+	}
+	
+	//methods
+	public String getRandomName() {
+	    char letter = (char)(rand.nextInt(26) + 'A');
+	    int number = rand.nextInt(90) + 10;
+	    
+	    name = "" + letter + number;
+	    return name;
+	}
+	
+	@Override
+	public String toString() {
+	    return (name + "\\" + count);
+	}
+	
+	public void doSomething() {
+	    if (count < 5) {
+	        System.out.println(name + " is hiding");
+	    } else {
+	        System.out.println("ATTACK!");
+	    }
+	}
+}
+
+
+
+
+
+
+
