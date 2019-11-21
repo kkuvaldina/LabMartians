@@ -1,0 +1,12 @@
+public class MartianApp {
+	public static void main(String[] args) {
+		Martian myMartian = new Martian();
+		System.out.println(myMartian);
+		
+		Martian[] martians = {new Martian(), new Martian(), new Martian()};
+		
+		for (Martian el : martians) {
+		    el.doSomething();
+		}
+	}
+}
